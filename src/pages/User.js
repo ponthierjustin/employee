@@ -47,7 +47,8 @@ class User extends Component {
                 lastName={user.name.last}
                 email={user.email}
                 phone={user.phone}
-                dob={user.dob.date}
+                dob={user.dob.date.slice(0, 10)}
+
               />
             ))}
           </Box>
