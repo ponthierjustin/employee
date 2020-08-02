@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import UserCard from "../components/UserCard";
+import Box from "@material-ui/core/Box";
 
 class User extends Component {
   state = {
@@ -26,13 +27,30 @@ class User extends Component {
     return (
       <div>
         <div className="container">
-          <h1 className="text-center">EMPLOYEES</h1>
-          {this.state.users.map(user => (
-              <UserCard 
-              image={user.picture.thumbnail}
+          <Box display="flex" justifyContent="space-around">
+            <h1 className="text-center">EMPLOYEES</h1>
+          </Box>
+          <Box
+            display="flex"
+            flexWrap="wrap"
+            flexDirection="row"
+            p={1}
+            m={4}
+            bgcolor="background.paper"
+            width="100%"
+          >
+            {this.state.users.map((user) => (
+              <UserCard
+                //ADD A KEY
+                image={user.picture.large}
+                firstName={user.name.first}
+                lastName={user.name.last}
+                email={user.email}
+                phone={user.phone}
+                dob={user.dob.date}
               />
-          ))}
-          
+            ))}
+          </Box>
         </div>
       </div>
     );
