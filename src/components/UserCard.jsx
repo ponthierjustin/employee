@@ -10,7 +10,7 @@ import Box from "@material-ui/core/Box";
 import Avatar from '@material-ui/core/Avatar';
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+   /*  maxWidth: 300, */
     flexGrow: 1,
   },
 });
@@ -24,7 +24,7 @@ const UserCard = (props) => {
   const classes = useStyles();
 
   return (
-    <Box m={.5} >
+    <Box m={2} width={300} mx="auto">
       <Card className={classes.root}>
         <CardActionArea>
           <Avatar
