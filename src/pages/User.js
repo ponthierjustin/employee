@@ -39,20 +39,20 @@ class User extends Component {
 
   handleInputChange = (e) => {
     e.preventDefault();
-    const employeeName = e.target.value;
+    const userName = e.target.value;
 
-    const searchUsers = this.state.users.filter((employees) => {
-      const { first: firstName, last: lastName } = employees.name;
+    const filterUsers = this.state.users.filter((user) => {
+      const { first: firstName, last: lastName } = user.name;
 
-      const searchedEmployeesName = `${firstName} ${lastName}`;
-      return searchedEmployeesName
+      const filteredUsers= `${firstName} ${lastName}`;
+      return filteredUsers
         .toLowerCase()
-        .includes(employeeName.toLowerCase().trim());
+        .includes(userName.toLowerCase().trim());
     });
 
     this.setState({
-      searchUsers: searchUsers,
-      search: employeeName,
+      searchUsers: filterUsers,
+      search: userName,
     });
   };
 
