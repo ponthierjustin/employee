@@ -34,8 +34,7 @@ class User extends Component {
             display="flex"
             flexWrap="wrap"
             flexDirection="row"
-            p={1}
-            m={4}
+            alignItems="center"
             bgcolor="background.paper"
             width="100%"
           >
