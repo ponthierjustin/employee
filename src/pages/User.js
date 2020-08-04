@@ -3,7 +3,6 @@ import API from "../utils/API";
 import UserCard from "../components/UserCard.jsx";
 import NavBar from "../components/NavBar.jsx";
 import Box from "@material-ui/core/Box";
-/* import NavBar from "../components/NavBar"; */
 
 class User extends Component {
   state = {

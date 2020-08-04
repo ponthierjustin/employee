@@ -10,7 +10,6 @@ import Box from "@material-ui/core/Box";
 import Avatar from '@material-ui/core/Avatar';
 const useStyles = makeStyles({
   root: {
-   /*  maxWidth: 300, */
     flexGrow: 1,
   },
 });
