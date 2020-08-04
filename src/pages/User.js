@@ -3,7 +3,6 @@ import API from "../utils/API";
 import UserCard from "../components/UserCard.jsx";
 import NavBar from "../components/NavBar.jsx";
 import Box from "@material-ui/core/Box";
-/* import NavBar from "../components/NavBar"; */
 
 class User extends Component {
   state = {
@@ -37,7 +36,7 @@ class User extends Component {
     const filterUsers = this.state.users.filter((user) => {
       const { first: firstName, last: lastName } = user.name;
 
-      const filteredUsers= `${firstName} ${lastName}`;
+      const filteredUsers = `${firstName} ${lastName}`;
       return filteredUsers
         .toLowerCase()
         .includes(userName.toLowerCase().trim());
@@ -63,10 +62,10 @@ class User extends Component {
     return (
       <div>
         <div className="container">
-          <NavBar handleInputChange={this.handleInputChange} />
-          <button className="text-center" onClick={this.sortUser}>
-            sort
-          </button>
+          <NavBar
+            handleInputChange={this.handleInputChange}
+            sortUser={this.sortUser}
+          />
 
           <Box
             display="flex"
