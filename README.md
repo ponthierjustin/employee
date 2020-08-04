@@ -19,7 +19,7 @@ Clone this repository: [Github Repo](https://github.com/ponthierjustin/employee)
 
 ## Usage
 
-![screenshot](assets\screenshots.png)
+![screenshot](assets/screenshots.png)
 
 Allows users to keep up with their current employees, filter through them by search, and sort by last name.
 
